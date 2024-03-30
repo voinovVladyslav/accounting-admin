@@ -46,6 +46,8 @@ class PhonePart(models.Model):
         Phone,
         on_delete=models.CASCADE,
         related_name="parts",
+        null=True,
+        blank=True,
     )
 
     def __str__(self):
