@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "admin_auto_filters",
 
     "phones",
+    "processes",
 ]
 
 MIDDLEWARE = [
