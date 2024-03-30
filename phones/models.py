@@ -29,3 +29,25 @@ class Phone(models.Model):
         choices=PhoneStatus.choices,
         default=PhoneStatus.BOUGHT,
     )
+
+    def __str__(self):
+        return f'{self.name} ({self.imei})'
+
+
+class PhonePart(models.Model):
+    class Meta:
+        verbose_name = "Phone Part"
+        verbose_name_plural = "Phone Parts"
+
+    name = models.CharField(
+        max_length=200,
+    )
+    phone = models.ForeignKey(
+        Phone,
+        on_delete=models.CASCADE,
+        related_name="parts",
+    )
+
+    def __str__(self):
+        return f'{self.name} ({self.pk})'
+
