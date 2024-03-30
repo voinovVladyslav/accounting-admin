@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import sys
 from pathlib import Path
 
 import environ
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "phones",
 ]
 
 MIDDLEWARE = [
@@ -91,13 +94,13 @@ DATABASES = {
         "PORT": DB_PORT,
         "USER": DB_USER,
         "PASSWORD": DB_PASSWORD,
-
-        "TEST": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
     }
 }
+
+if "test" in sys.argv:
+    # use sqlite for tests
+    DATABASES["default"]["ENGINE"] = "django.db.backends.sqlite3"
+    DATABASES["default"]["NAME"] = BASE_DIR / "db.sqlite3"
 
 
 # Password validation
