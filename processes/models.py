@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.functions import Lower
+from django.utils import timezone
 
 
 class ProcessStatus(models.TextChoices):
@@ -69,3 +70,10 @@ class Process(models.Model):
 
     def __str__(self):
         return f'{self.process_type} ({self.status})'
+
+    def save(self, *args, **kwargs):
+        if self.status == ProcessStatus.COMPLETED:
+            self.ended_at = timezone.now()
+        else:
+            self.ended_at = None
+        super().save()

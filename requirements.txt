@@ -15,6 +15,7 @@ flake8-pytest==1.4
 iniconfig==2.0.0
 lazy-object-proxy==1.10.0
 mccabe==0.7.0
+model-bakery==1.17.0
 packaging==24.0
 platformdirs==4.2.0
 pluggy==1.4.0

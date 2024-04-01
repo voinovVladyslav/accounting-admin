@@ -10,11 +10,10 @@ class UserTransaction(BaseTransaction):
         verbose_name_plural = 'User Transactions'
 
     user = models.ForeignKey(
-        get_user_model(), 
-        on_delete=models.CASCADE, 
+        get_user_model(),
+        on_delete=models.CASCADE,
         related_name='transactions'
     )
 
     def __str__(self):
         return f'{self.user} - {self.amount}'
-

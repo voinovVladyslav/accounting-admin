@@ -9,8 +9,8 @@ class PhoneTransaction(BaseTransaction):
         verbose_name_plural = 'Phone Transactions'
 
     phone = models.ForeignKey(
-        'phones.Phone', 
-        on_delete=models.CASCADE, 
+        'phones.Phone',
+        on_delete=models.CASCADE,
         related_name='transactions'
     )
 

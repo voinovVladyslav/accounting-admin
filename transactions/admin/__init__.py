@@ -4,7 +4,7 @@ from .phoneparts import PhonePartTransactionAdmin
 
 
 __all__ = (
-   'UserTransactionAdmin',
+    'UserTransactionAdmin',
     'PhoneTransactionAdmin',
     'PhonePartTransactionAdmin',
 )
