@@ -1,6 +1,15 @@
-* {
-    background-color: #f5f3fc;
-    color: #05040b;
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+a {
     text-decoration: none;
+}
+
+ul, ol, li {
     list-style: none;
 }
+

@@ -1,39 +1,9 @@
-.primary-bg {
-    background-color: #694cb8;
-}
-
-.primary-text {
-    color: #694cb8;
-}
-
-.info-bg {
-    background-color: #a085fa;
-}
-
-.info-text {
-    color: #a085fa;
-}
-
-.success-bg {
-    background-color: #77a26a;
-}
-
-.success-text {
-    color: #77a26a;
-}
-
-.warning-bg {
-    background-color: #f5ae49;
-}
-
-.warning-text {
-    color: #f5ae49;
-}
-
-.danger-bg {
-    background-color: #ba4b4f;
-}
-
-.danger-text {
-    color: #ba4b4f;
+* {
+    --text-color: #05040b;
+    --background: #f5f3fc;
+    --primary: #694cb8;
+    --info: #a085fa;
+    --success: #77a26a;
+    --warning: #f5ae49;
+    --danger: #ba4b4f;
 }

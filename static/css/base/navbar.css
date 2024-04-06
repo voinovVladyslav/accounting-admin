@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    background-color: var(--primary);
+}
+
+.navbar div {
+    margin: 10px; 
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar a, div {
+    color: var(--background);
+}
+
+.navbar a:hover {
+    cursor: pointer;
+    color: var(--info);
+    transition: 0.1s;
+}
