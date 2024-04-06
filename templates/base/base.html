@@ -1,0 +1,17 @@
+{% load static %}
+
+<html>
+<head>
+    <title>{% block title%} Accounting Tool {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base/colors.css' %}">
+</head>
+<body>
+        {% include "base/navbar.html" %}
+    {% block body %}
+    <div>
+        This is the base template and this text should not be visible
+    </div>
+    {% endblock %}
+</body>
+</html>
