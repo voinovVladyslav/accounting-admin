@@ -1,18 +1,21 @@
 {% load static %}
 
+<!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title%} Accounting Tool {% endblock %}</title>
+    <title>{% block title %} Accounting Tool {% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/base/main.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base/colors.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base/navbar.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base/shortcuts.css' %}">
+    {% block css %}{% endblock %}
 </head>
 <body>
-        {% include "base/navbar.html" %}
+    {% include "base/navbar.html" %}
+    <h1 class="heading">{% block heading %}<span>replace me</span>{% endblock %}</h1>
     {% block body %}
     <div>
-        This is the base template and this text should not be visible
+        this is the base template and this text should not be visible
     </div>
     {% endblock %}
 </body>

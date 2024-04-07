@@ -30,3 +30,18 @@
     align-items: end;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.shadow {
+    box-shadow: rgba(105, 76, 184, 0.3) 0px 0px 0px 3px;
+}

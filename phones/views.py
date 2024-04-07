@@ -9,4 +9,3 @@ class PhonesView(View):
         phones = Phone.objects.all()
         context = {'phones': phones}
         return render(request, 'phones/main.html', context)
-

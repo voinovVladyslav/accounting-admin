@@ -1,3 +1,7 @@
+* {
+    text-transform: lowercase;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -13,3 +17,7 @@ ul, ol, li {
     list-style: none;
 }
 
+.heading {
+    margin-bottom: 20px;
+    text-align: center;
+}

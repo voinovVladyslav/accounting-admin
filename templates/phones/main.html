@@ -1,6 +1,32 @@
 {% extends "base/base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/phones/main.css' %}">
+{% endblock %}
 
 {% block title %} Phones {% endblock %}
+{% block heading %} Phones {% endblock %}
 {% block body %}
-    <h1>Phones page</h1>
+    <div class="phones-container">
+        {% for phone in phones %}
+        <div class="phone-card shadow">
+            <h2 class="text-center phone-card__header">{{ phone.name }}</h2>
+            <div class="flex justify-between">
+                <div style="margin-right: 10px">
+                    <span>imei: </span>
+                    <span>{{ phone.imei }}</span>
+                </div>
+                <div style="margin-left: 10px">
+                    <span>estimated price: </span>
+                    <span>{{ phone.estimated_price }}</span>
+                </div>
+            </div>
+            <div>
+                <span>status: </span>
+                <span>{{ phone.status }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}
