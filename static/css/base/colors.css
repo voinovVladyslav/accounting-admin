@@ -7,3 +7,59 @@
     --warning: #f5ae49;
     --danger: #ba4b4f;
 }
+
+.bg-text-color {
+    background-color: var(--text-color);
+}
+
+.bg-default {
+    background-color: var(--background);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-info {
+    background-color: var(--info);
+}
+
+.bg-success {
+    background-color: var(--success);
+}
+
+.bg-warning {
+    background-color: var(--warning);
+}
+
+.bg-danger {
+    background-color: var(--danger);
+}
+
+.text-bg {
+    color: var(--background);
+}
+
+.text-default {
+    color: var(--text-color);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-info {
+    color: var(--info);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.text-warning {
+    color: var(--warning);
+}
+
+.text-danger {
+    color: var(--danger);
+}

@@ -1,11 +1,11 @@
-<navbar class="navbar">
-    <div>
-        <a href="{% url 'phones' %}">Phones</a>
-        <a href="{% url 'phones' %}">Phones</a>
-        <a href="{% url 'phones' %}">Phones</a>
-        <a href="{% url 'phones' %}">Phones</a>
+<navbar class="flex justify-evenly navbar bg-primary">
+    <div class="navbar__item">
+        <a class="text-bg navbar_link" href="{% url 'phones' %}">Phones</a>
+        <a class="text-bg navbar_link" href="{% url 'phones' %}">Phones</a>
+        <a class="text-bg navbar_link" href="{% url 'phones' %}">Phones</a>
+        <a class="text-bg navbar_link" href="{% url 'phones' %}">Phones</a>
     </div>
-    <div>
-        username
+    <div class="navbar__item text-bg">
+        <span>{{ user.username }}(<a class="navbar_link text-bg" href="/">Logout</a>)</span>
     </div>
 </navbar>
