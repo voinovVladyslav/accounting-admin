@@ -21,3 +21,19 @@ ul, ol, li {
     margin-bottom: 20px;
     text-align: center;
 }
+
+.btn {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.btn-primary:hover {
+    background-color: var(--info);
+    transition: 0.1s;
+}

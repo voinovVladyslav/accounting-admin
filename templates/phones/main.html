@@ -26,6 +26,13 @@
                 <span>status: </span>
                 <span>{{ phone.status }}</span>
             </div>
+            <div class="button-container">
+                <button class="btn btn-primary">
+                    <a href="{% url 'phones' %}" target="_blank" class="text-bg">
+                        Details
+                    </a>
+                </button>
+            </div>
         </div>
         {% endfor %}
     </div>
