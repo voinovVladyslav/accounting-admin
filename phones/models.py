@@ -1,5 +1,7 @@
 from django.db import models
 
+from core.models import TimeStampedModel
+
 
 class PhoneStatus(models.TextChoices):
     BOUGHT = "Bought"
@@ -10,7 +12,7 @@ class PhoneStatus(models.TextChoices):
     ERROR = "Error"
 
 
-class Phone(models.Model):
+class Phone(TimeStampedModel):
     name = models.CharField(
         max_length=200,
     )
@@ -34,7 +36,7 @@ class Phone(models.Model):
         return f'{self.name} ({self.imei})'
 
 
-class PhonePart(models.Model):
+class PhonePart(TimeStampedModel):
     class Meta:
         verbose_name = "Phone Part"
         verbose_name_plural = "Phone Parts"

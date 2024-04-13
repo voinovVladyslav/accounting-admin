@@ -2,6 +2,8 @@ from django.db import models
 from django.db.models.functions import Lower
 from django.utils import timezone
 
+from core.models import TimeStampedModel
+
 
 class ProcessStatus(models.TextChoices):
     CREATED = 'Created'
@@ -10,7 +12,7 @@ class ProcessStatus(models.TextChoices):
     ERROR = 'Error'
 
 
-class ProcessType(models.Model):
+class ProcessType(TimeStampedModel):
     class Meta:
         verbose_name = 'Process Type'
         verbose_name_plural = 'Process Types'
@@ -33,7 +35,7 @@ class ProcessType(models.Model):
         return f'{self.name}'
 
 
-class Process(models.Model):
+class Process(TimeStampedModel):
     class Meta:
         verbose_name = 'Process'
         verbose_name_plural = 'Processes'
@@ -56,12 +58,6 @@ class Process(models.Model):
     notes = models.TextField(
         blank=True,
         default='',
-    )
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-    )
-    updated_at = models.DateTimeField(
-        auto_now=True,
     )
     ended_at = models.DateTimeField(
         null=True,
