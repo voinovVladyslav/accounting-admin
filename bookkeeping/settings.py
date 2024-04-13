@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "phones",
     "processes",
     "transactions",
+    "core",
 ]
 
 MIDDLEWARE = [
